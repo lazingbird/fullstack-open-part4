@@ -26,9 +26,6 @@ const favoriteBlog = (blogs) => {
 const mostBlogs = (blogs) => {
   let countAuthors = {};
 
-  let authorWithMostBlogs = "";
-  let maxBlogs = 0;
-
   blogs.map((blog) => {
     for (let key in blog) {
       if (key === "author") {
@@ -40,6 +37,9 @@ const mostBlogs = (blogs) => {
       }
     }
   });
+
+  let authorWithMostBlogs = "";
+  let maxBlogs = 0;
 
   for (key in countAuthors) {
     if (countAuthors[key] > maxBlogs) {
@@ -54,9 +54,44 @@ const mostBlogs = (blogs) => {
   };
 };
 
+const mostLikes = (blogs) => {
+  let countAuthors = {};
+  let lastAuthor = "";
+
+  blogs.map((blog) => {
+    for (let key in blog) {
+      if (key === "author") {
+        if (blog[key] in countAuthors === false) {
+          countAuthors[blog[key]] = 0;
+          lastAuthor = blog[key];
+        }
+      }
+      if (key === "likes") {
+        countAuthors[lastAuthor] += blog[key];
+      }
+    }
+  });
+
+  let authorWithMostLikes = "";
+  let maxLikes = 0;
+
+  for (key in countAuthors) {
+    if (countAuthors[key] > maxLikes) {
+      maxLikes = countAuthors[key];
+      authorWithMostLikes = key;
+    }
+  }
+
+  return {
+    author: authorWithMostLikes,
+    likes: maxLikes,
+  };
+};
+
 module.exports = {
   dummy,
   totalLikes,
   favoriteBlog,
   mostBlogs,
+  mostLikes,
 };

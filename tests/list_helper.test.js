@@ -45,11 +45,20 @@ describe("favorite blog (with most likes)", () => {
   });
 });
 
-describe("author with most blogs", () => {
+describe("get author with most blogs", () => {
   test("return an object containg the author with most blogs and how many", () => {
     expect(listHelper.mostBlogs(blogsData)).toEqual({
       author: "Robert C. Martin",
       blogs: 3,
+    });
+  });
+});
+
+describe("get author with most likes", () => {
+  test("return an object containg the author with most likes and how many", () => {
+    expect(listHelper.mostLikes(blogsData)).toEqual({
+      author: "Edsger W. Dijkstra",
+      likes: 17,
     });
   });
 });
