@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/blogs/659756754dd52ecb23618fd4
+Content-Type: application/json
+
+{
+    "title":"Medium do Calebe Lopes",
+    "author":"Calebe Lopes",
+    "url":"https://medium.com/@calebelopes",
+    "likes": 50
+}

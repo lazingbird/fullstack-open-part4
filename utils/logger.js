@@ -1,9 +1,13 @@
 const info = (...params) => {
-  console.log(...params);
+  if (process.env.NODE_ENV !== "tfest") {
+    console.log(...params);
+  }
 };
 
 const error = (...params) => {
-  console.error(...params);
+  if (process.env.NODE_ENV !== "tfest") {
+    console.error(...params);
+  }
 };
 
 module.exports = {
