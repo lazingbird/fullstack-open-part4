@@ -1,8 +1,0 @@
-POST http://localhost:3001/api/blogs
-Content-Type: application/json
-
-{
-    "title":"Medium do Calebe Lopes",
-    "author":"Calebe Lopes",
-    "url":"https://medium.com/@calebelopes"
-}
