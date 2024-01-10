@@ -1,6 +1,6 @@
 POST http://localhost:3001/api/blogs
 Content-Type:application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldkRlbGV0ZTIiLCJpZCI6IjY1OTg3YTVjYTgwOTliODQ1ZjE0NGJhMSIsImlhdCI6MTcwNDQ5MTY1MH0.tYjBgbVLGj_nP-7LoNGmHzA81xyLzqVAq4tpxXIMgLE
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRldkRlbGV0ZTIiLCJpZCI6IjY1OTg3YTVjYTgwOTliODQ1ZjE0NGJhMSIsImlhdCI6MTcwNDkxNjIyNn0.AFbYvh4KmxU-ym9PZEj7ZSmYnujC0biwQ3wvPapnk-I
 
 {
     "title":"Teste de criação de blog com ID de usuário",
